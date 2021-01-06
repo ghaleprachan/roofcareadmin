@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.adminpanel">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".ApplicationCollection.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,InnerclassSeparator,UnusedAttribute">
+        <activity
+            android:name=".ActivityCollection.OfferReports.OfferReportsActivity"
+            android:label="Offer Reports"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityCollection.UserReports.UserReportActivity"
+            android:label="User Reports"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityCollection.ProblemReports.ProblemReportsActivity"
+            android:label="Problem Reports"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityCollection.AddMunicipality.AddMunicipality"
+            android:label="Add Municipality"
+            android:parentActivityName=".MainActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".ActivityCollection.Municipality.MunicipalityActivity"
+            android:parentActivityName=".MainActivity"
+            tools:ignore="InnerclassSeparator" /> <!-- This is added for crop image it should be always on the top -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".ActivityCollection.AddDistrict.AddDistrict"
+            android:label="Add District"
+            android:parentActivityName=".MainActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".ActivityCollection.LogInActivity.LogInActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+    </application>
+
+</manifest>

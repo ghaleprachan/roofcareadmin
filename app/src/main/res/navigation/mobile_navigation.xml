@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.adminpanel.UIFragments.Dashboard"
+        android:label="@string/menu_home"
+        tools:layout="@layout/dashboard_fragment">
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.adminpanel.UIFragments.Dashboard"
+        android:label="@string/home_second"
+        tools:layout="@layout/dashboard_fragment">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_districts"
+        android:name="com.example.adminpanel.UIFragments.Districts"
+        android:label="@string/menu_district"
+        tools:layout="@layout/districts_fragment" />
+
+    <fragment
+        android:id="@+id/nav_offer_reports"
+        android:name="com.example.adminpanel.UIFragments.OfferReports"
+        android:label="@string/post_reports"
+        tools:layout="@layout/post_reports_fragment" />
+    <fragment
+        android:id="@+id/nav_problem_reports"
+        android:name="com.example.adminpanel.UIFragments.ProblemReports"
+        android:label="@string/problem_reports"
+        tools:layout="@layout/problem_report_fragment" />
+    <fragment
+        android:id="@+id/nav_user_reports"
+        android:name="com.example.adminpanel.UIFragments.UserReports"
+        android:label="@string/user_reports"
+        tools:layout="@layout/user_report_fragment" />
+
+    <fragment
+        android:id="@+id/nav_verify_posts"
+        android:name="com.example.adminpanel.UIFragments.VerifyPosts"
+        android:label="@string/verify_posts"
+        tools:layout="@layout/verify_posts_fragment" />
+
+    <fragment
+        android:id="@+id/nav_verify_user"
+        android:name="com.example.adminpanel.UIFragments.VerifyUser"
+        android:label="@string/verify_user"
+        tools:layout="@layout/verify_user_fragment" />
+
+</navigation>

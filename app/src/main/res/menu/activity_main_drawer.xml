@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_districts"
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="@string/menu_district" />
+        <item
+            android:id="@+id/nav_offer_reports"
+            android:icon="@drawable/ic_report_problem_black_24dp"
+            android:title="@string/post_reports" />
+        <item
+            android:id="@+id/nav_problem_reports"
+            android:icon="@drawable/ic_report_problem_black_24dp"
+            android:title="@string/problem_reports" />
+        <item
+            android:id="@+id/nav_user_reports"
+            android:icon="@drawable/ic_report_black_24dp"
+            android:title="@string/user_reports" />
+        <item
+            android:id="@+id/nav_verify_posts"
+            android:icon="@drawable/ic_check_black_24dp"
+            android:title="@string/verify_posts"
+            android:visible="false" />
+        <item
+            android:id="@+id/nav_verify_user"
+            android:icon="@drawable/ic_done_all_black_24dp"
+            android:title="@string/verify_user" />
+    </group>
+    <item android:title="@string/communication">
+        <menu>
+            <item
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/ic_vpn_key_black_24dp"
+                android:title="@string/log_out" />
+        </menu>
+    </item>
+
+</menu>
